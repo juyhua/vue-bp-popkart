@@ -1,0 +1,40 @@
+{
+  "name": "vue-bp-popkart",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "run-p dev:client server:dev",
+    "dev:client": "vite",
+    "server": "node server/server.js",
+    "server:dev": "nodemon --watch server server/server.js",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "dependencies": {
+    "pinia": "^3.0.3",
+    "vue": "^3.5.22",
+    "vue-router": "^4.5.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2",
+    "@types/node": "^22.18.6",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "npm-run-all2": "^8.0.4",
+    "typescript": "~5.9.0",
+    "vite": "^7.1.7",
+    "vite-plugin-vue-devtools": "^8.0.2",
+    "vue-tsc": "^3.1.0",
+    "nodemon": "^3.1.0"
+  }
+}
